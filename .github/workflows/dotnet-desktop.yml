@@ -78,5 +78,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: YourSolutionName-Artifact  # Use your solution name here
+        name: Mental Health  # Use your solution name here
         path: bin/Release/net7.0/win-x64/publish/Mental Health.exe
