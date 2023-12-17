@@ -1,9 +1,33 @@
-﻿@{
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<Main>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
 
+
+
+<section id="meditation">
+    <div class="container-fluid mt-5">
+        <div class="text-center mb-5">
+            <h2 class="pb-3 cursive">Charting a Course to Mental Well-being</h2>
+            <p class="text-uppercase">Your Mental Well-being Matters </p>
+        </div>
+
+        <div class="row pt-3">
+            <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+                <div class="text-center cursive lh-lg px-3">
+                @foreach (var description in Model)
+                    {<contentful-rich-text document="@description.Description"></contentful-rich-text>}
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+                <contentful-image asset-id="UYTrwf9rbc17R8joNExMu" alt="" class="w-auto img-fluid d-block"/>
+            </div>
+            </div>
+
+        </div>
+</section>

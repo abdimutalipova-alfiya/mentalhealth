@@ -1,0 +1,22 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<Course>
+
+@{
+    ViewData["Title"] = "Course";
+}
+
+<div class="row">
+
+    @foreach (var course in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 mb-4 mx-3">
+                @Html.Partial("_CourseCard", course)
+            </div>
+        </div>
+    }
+</div>
+
+
+

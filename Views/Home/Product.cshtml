@@ -1,0 +1,19 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<Product>
+
+@{
+    ViewData["Title"] = "Product";
+}
+<div class="row">
+
+    @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                    <div class="card mb-4 mx-3">
+                        @Html.Partial("_ProductCard", product)
+                    </div>
+            </div>
+        }
+</div>
+

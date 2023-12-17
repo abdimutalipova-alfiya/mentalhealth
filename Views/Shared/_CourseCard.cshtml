@@ -1,0 +1,20 @@
+﻿@using Contentful.Core.Models
+@model Course
+
+@{
+    ViewData["Title"] = "Course";
+}
+
+<div class="card h-100">
+    
+    
+    <div class="card-body">
+        <p class="py-3 muted">@Model.Type</p>
+        <h3 class="mb-3">@Model.Name</h3>
+        <p>@Model.Description</p>
+        <form asp-controller="Home" asp-action="Course" method="get">
+        <input type="hidden" name="courseId" value="@Model.Sys.Id" />
+        <button type="submit" class="button mt-3">@Model.Name</button>
+        </form>
+    </div>
+</div>

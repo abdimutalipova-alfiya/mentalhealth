@@ -1,0 +1,23 @@
+﻿@using Contentful.Core.Models
+
+
+@{
+    ViewData["Title"] = "Course";
+}
+
+<div>
+    
+    <div class="py-3">
+        <div class="container-fluid">
+            <div class="row mx-4">
+<h1 class="mb-3">@Model.Name</h1>
+                
+                   <contentful-rich-text document="@Model.Information"></contentful-rich-text>
+
+            </div>   
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,5 +1,19 @@
-﻿html {
-  font-size: 14px;
+﻿@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Playfair+Display+SC&family=Playfair+Display:wght@400;600;700&display=swap');
+
+
+html {
+    font-size: 14px;
+}
+
+
+.navbar-brand{
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+
+footer {
+    background-color: #EFD3D7;
 }
 
 @media (min-width: 768px) {
@@ -17,6 +31,10 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+.button {
+    background-color: #EFD3D7;
+    padding: 15px 32px;
+    border: none;
+    text-align: center;
+    display: inline-block;
 }

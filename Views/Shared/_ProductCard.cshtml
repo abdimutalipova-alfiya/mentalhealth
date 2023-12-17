@@ -1,0 +1,18 @@
+﻿@using Contentful.Core.Models
+@model Product
+
+@{
+    ViewData["Title"] = "Product";
+}
+
+<div class="card">
+    <img src="@Model.Image.File.Url" class="card-img-top img-fluid object-fit-contain" alt="@Model.Title" width="200">
+    <div class="card-body">
+        <div class="text-center fw-bold text-decoration-underline">
+        <a class="card-title text-dark" asp-area="" asp-controller="Home" asp-action="Product_Page">@Model.Name</a></>
+        </div>
+        <p class="card-text text-center mx-auto">@Model.Title</p>
+        <p class="card-text text-center mx-auto">$@Model.Price</p>
+    </div>
+</div>
+
